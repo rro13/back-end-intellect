@@ -4,7 +4,8 @@ const MONGODB_URI = process.env.MONGODB_URI
 
 const connect = async () => {
     try {
-        await mongoose.connect(MONGODB_URI, {
+        mongoose.set("strictQuery",true)
+        mongoose.connect(MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
@@ -17,3 +18,6 @@ const connect = async () => {
 module.exports = {
     connect
 }
+
+
+//duvida, e o await?
