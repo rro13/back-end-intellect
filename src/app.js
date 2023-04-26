@@ -3,11 +3,11 @@ const app = express()
 const cors = require('cors')
 const mongoose = require("mongoose")
 
-
 require('dotenv-safe').config();
 
 const db = require('./config/database')
 const userRoutes = require('./routes/userRoutes')
+const expertRoutes = require ('./routes/expertRoutes')
 
 db.connect() 
 
