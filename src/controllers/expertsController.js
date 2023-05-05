@@ -1,6 +1,7 @@
 const ExpertSchema = require ("../models/expertSchema")
 const userSchema = require("../models/userSchema")
 
+
 const getExpert = async (req,res) =>{
     try{
         //id => URL === GET
@@ -69,7 +70,7 @@ const updateExpert = async (req,res) => {
 
 }
 
-const deleteExpert = async(req,res)=> {
+//const deleteExpert = async(req,res)=> {
     try{
         const expertFound = await ExpertSchema.findById(req.params.id)
 
@@ -85,7 +86,7 @@ const deleteExpert = async(req,res)=> {
             {message: error.message}
         )
     }
-}
+//}
 
 module.exports = {
     createExpert,
