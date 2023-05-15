@@ -70,7 +70,7 @@ const updateExpert = async (req,res) => {
 
 }
 
-//const deleteExpert = async(req,res)=> {
+const deleteExpert = async(req,res)=> {
     try{
         const expertFound = await ExpertSchema.findById(req.params.id)
 
@@ -86,7 +86,7 @@ const updateExpert = async (req,res) => {
             {message: error.message}
         )
     }
-//}
+}
 
 module.exports = {
     createExpert,
